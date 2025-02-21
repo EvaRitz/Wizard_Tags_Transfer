@@ -20,7 +20,7 @@ Wizard_Tags_Transfer.wizard_tags_transfer_launcher.launch()
 Wizard_Tags_Transfer.wizard_tags_transfer_launcher.shelf()
 ```
 
-It will create a Button on the Custom Shelf of Maya with this icon ![alt text](icons/wizard_tags_transfer_icon.svg) !
+It will create a Button on the Custom Shelf of Maya with this icon ![alt text](icons/wizard_tags_transfer_icon.svg)
 
 ## How to use
 
