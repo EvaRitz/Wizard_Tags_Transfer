@@ -1,0 +1,33 @@
+QWidget {
+    background-color: #3B3B45;
+    border: none;
+    color: rgb(215, 215, 215);
+    font-size: 20px;
+}
+
+QPushButton {
+    background-color: #2C2C33;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: #444450;
+}
+
+QListWidget#referent_list_widget {
+    background-color: #5C5C6B;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+QLabel#wizard_tags_label {
+    background-color: #5C5C6B;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+QFrame {
+    background-color: transparent;
+}
