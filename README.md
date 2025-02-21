@@ -34,8 +34,9 @@ It will create a Button on the Custom Shelf of Maya with this icon ![alt text](i
 Additionally, you can't add meshes that don't have Wizard Tags into the list widget, you can select a folder in your outliner or multiples meshes to transfer the data all at once.
 As a security, if a mesh already has wizardTags attributes, it will as for permission to override.
 
-## Licence
+## License
 
+Wizard_Tags_Transfer is available under the MIT License. You can use it for commercial or non-commercial projects. Be sure to credit me in the project and documentation.
 
 ## Project status
 
