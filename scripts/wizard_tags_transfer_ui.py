@@ -7,13 +7,14 @@ if maya_version >= 20250000:
 )
     from PySide6.QtGui import QIcon
     from PySide6.QtCore import Qt
+    import shiboken6 as shiboken # To wrap Maya's Qt widgets into PySide6
 else:
     from PySide2.QtWidgets import (
         QDialog, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QListWidget, QFrame, QSpacerItem, QSizePolicy, QWidget
 )
     from PySide2.QtGui import QIcon
     from PySide2.QtCore import Qt
-import shiboken2
+    import shiboken2 as shiboken # To wrap Maya's Qt widgets into PySide2
 import maya.OpenMayaUI as omui
 import maya.OpenMaya as om
 import os
@@ -22,7 +23,7 @@ import Wizard_Tags_Transfer.scripts.wizard_tags_transfer_utils as utils  # Impor
 def maya_main_window():
     """Get Maya's main window as a QWidget."""
     main_window_ptr = omui.MQtUtil.mainWindow()
-    return shiboken2.wrapInstance(int(main_window_ptr), QDialog)
+    return shiboken.wrapInstance(int(main_window_ptr), QDialog)
 
 
 def get_abspath(relative_path):
@@ -155,6 +156,6 @@ def run():
     try:
         wizard_tags_transfer_window.close()
         wizard_tags_transfer_window.deleteLater()
-    except:
+    except RuntimeError:
         pass
     wizard_tags_transfer_window = WizardTagsTransfer()
