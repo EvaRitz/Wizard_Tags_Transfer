@@ -39,7 +39,5 @@ As a security, if a mesh already has wizardTags attributes, it will as for permi
 Wizard_Tags_Transfer is available under the MIT License. You can use it for commercial or non-commercial projects. Be sure to credit me in the project and documentation.
 
 ## Project status
-
-Update from Pyside2 to Pyside6 for Maya versions 2025 and after.
-
+git 
 Update the flickering in the wizard tags box (doesn't affect the functionality)
