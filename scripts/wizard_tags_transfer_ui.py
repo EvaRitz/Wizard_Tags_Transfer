@@ -1,9 +1,18 @@
 import maya.cmds as cmds
-from PySide2.QtWidgets import (
+maya_version = int(cmds.about(apiVersion=True))
+
+if maya_version >= 20250000:
+    from PySide6.QtWidgets import (
     QDialog, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QListWidget, QFrame, QSpacerItem, QSizePolicy, QWidget
 )
-from PySide2.QtGui import QIcon
-from PySide2.QtCore import Qt
+    from PySide6.QtGui import QIcon
+    from PySide6.QtCore import Qt
+else:
+    from PySide2.QtWidgets import (
+        QDialog, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QListWidget, QFrame, QSpacerItem, QSizePolicy, QWidget
+)
+    from PySide2.QtGui import QIcon
+    from PySide2.QtCore import Qt
 import shiboken2
 import maya.OpenMayaUI as omui
 import maya.OpenMaya as om

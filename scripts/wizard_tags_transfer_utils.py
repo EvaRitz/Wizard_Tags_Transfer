@@ -1,7 +1,15 @@
-from PySide2 import QtWidgets
-from PySide2.QtWidgets import QMessageBox  # Import QMessageBox from PySide2
 import maya.cmds as cmds
 import maya.OpenMaya as om
+
+# Maya version specific imports
+maya_version = int(cmds.about(apiVersion=True))
+
+if maya_version >= 20250000:
+    from PySide6 import QtWidgets
+    from PySide6.QtWidgets import QMessageBox  # Import QMessageBox from PySide2
+else:
+    from PySide2 import QtWidgets
+    from PySide2.QtWidgets import QMessageBox  # Import QMessageBox from PySide2
 
 # Global dictionary to store object data
 object_data = {}  # Dictionary: { "object": "attribute_value" }
