@@ -105,7 +105,7 @@ def transfer_wizard_tags(get_tags):
         # Skip updating if the user selected "No"
         if current_tags and not overwrite_all:
             om.MGlobal.displayWarning(f"Skipping {transform}, existing tags not overwritten.")
-            return
+            continue
 
         # Now safely update the attribute
         cmds.setAttr(f"{transform}.{attribute_name}", get_tags, type="string")
